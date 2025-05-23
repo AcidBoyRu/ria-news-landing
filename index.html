@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости 24 — Последние события</title>
+  <title>Real News — Последние события</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -18,21 +18,37 @@
     header {
       background-color: #003366;
       color: #fff;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
-      display: inline-block;
-      vertical-align: middle;
+    .logo-title {
+      display: flex;
+      align-items: center;
     }
     .logo {
       height: 36px;
-      margin-right: 12px;
-      vertical-align: middle;
+      margin-right: 10px;
+    }
+    .site-name {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .layout {
       display: flex;
@@ -50,9 +66,10 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
     .sidebar {
-      flex: 1 1 300px;
+      flex: 1 1 700px;
+      max-width: 700px;
       padding: 20px;
-      margin: 10px;
+      margin: 10px auto 0 auto;
     }
     .news-box {
       background: #fff;
@@ -85,6 +102,14 @@
     a:hover {
       text-decoration: underline;
     }
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
     @media screen and (max-width: 768px) {
       .layout {
         flex-direction: column;
@@ -94,17 +119,27 @@
         margin: 5px 0;
         padding: 20px;
       }
-      .logo {
-        height: 28px;
-        margin-bottom: 8px;
+      nav {
+        justify-content: center;
+        margin-top: 10px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Feedbin-Icon-news.svg/1024px-Feedbin-Icon-news.svg.png" class="logo" alt="Новости 24">
-    <h1>Новости 24</h1>
+    <div class="logo-title">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Feedbin-Icon-news.svg/1024px-Feedbin-Icon-news.svg.png" class="logo" alt="Real News">
+    </div>
+    <div class="site-name">Real News</div>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Политика</a>
+      <a href="#">Экономика</a>
+      <a href="#">Общество</a>
+      <a href="#">Наука</a>
+      <a href="#">Контакты</a>
+    </nav>
   </header>
   <div class="layout">
     <div class="main-content">
@@ -121,7 +156,12 @@
       <div class="news-box">➤ В Сочи стартовал фестиваль уличной еды. Местные повара удивляют посетителей блюдами на мангале.</div>
       <div class="news-box">➤ В Кемерово школьники собрали электровелосипед из старых деталей. Их идеей заинтересовались местные бизнесмены.</div>
       <div class="news-box">➤ В Нижнем Новгороде кот помогает одинокой пенсионерке торговать семечками. Местные прозвали его “Директор”.</div>
+      <div class="news-box">➤ В Уфе молодожёны устроили свадьбу в автобусе, чтобы сэкономить на зале.</div>
+      <div class="news-box">➤ На Алтае волонтёры спасли енота, застрявшего в мусорном баке. Его теперь приютили в местной школе.</div>
     </div>
   </div>
+  <footer>
+    © 2025 Real News — Все права защищены | VK: @realnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24
+  </footer>
 </body>
 </html>
