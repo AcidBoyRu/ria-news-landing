@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real News — Последние события</title>
+  <title>Главные Новости — Последние события</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -18,35 +18,38 @@
     header {
       background-color: #003366;
       color: #fff;
-      padding: 15px 30px;
+      padding: 20px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
     }
     .site-name {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
       letter-spacing: 1px;
+      margin-right: auto;
     }
     nav {
       display: flex;
-      gap: 25px;
+      gap: 30px;
       flex-wrap: wrap;
     }
     nav a {
       color: #fff;
       text-decoration: none;
       font-size: 18px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
     .layout {
       display: flex;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 20px 40px;
     }
     .main-content {
       flex: 1 1 700px;
@@ -57,7 +60,7 @@
     }
     .sidebar {
       width: 280px;
-      margin-left: 20px;
+      margin-left: 30px;
     }
     .news-box {
       background: #fff;
@@ -94,10 +97,14 @@
     footer {
       background-color: #003366;
       color: #fff;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
+      padding: 40px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
     }
     @media screen and (max-width: 1024px) {
       .layout {
@@ -109,12 +116,21 @@
         margin-left: 0;
         margin-top: 20px;
       }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="site-name">Real News</div>
+    <div class="site-name">Главные Новости</div>
     <nav>
       <a href="#">Главная</a>
       <a href="#">Политика</a>
@@ -144,7 +160,11 @@
     </div>
   </div>
   <footer>
-    © 2025 Real News — Все права защищены | VK: @realnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24
+    <div class="footer-container">
+      <p><strong>© 2025 Главные Новости.</strong> Все права защищены. Использование материалов разрешено только с письменного согласия редакции. Информация на сайте носит справочный характер и не является публичной офертой.</p>
+      <p>Пользователь, оставляя данные на сайте, соглашается с политикой конфиденциальности и обработкой персональных данных в соответствии с Федеральным законом № 152-ФЗ.</p>
+      <p>Контакты: VK: @glavnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24</p>
+    </div>
   </footer>
 </body>
 </html>
