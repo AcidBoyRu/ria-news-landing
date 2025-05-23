@@ -3,81 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Главные Новости</title>
+  <title>RTVI — Главные события</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background-color: #ffffff;
+      color: #000;
     }
     header {
-      background-color: #1a1a1a;
-      color: #fff;
+      background-color: #141414;
       padding: 20px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    .site-name {
-      font-size: 28px;
+    .logo {
+      font-size: 26px;
       font-weight: bold;
+      color: #fff;
     }
     nav a {
       color: #fff;
-      margin-left: 20px;
       text-decoration: none;
+      margin-left: 30px;
       font-size: 16px;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #d61f26;
     }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
     .article {
       background-color: #fff;
-      padding: 30px;
-      border-radius: 8px;
+      padding: 40px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
     .article h1 {
-      font-size: 24px;
+      font-size: 28px;
       margin-bottom: 20px;
     }
     .article p {
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 16px;
     }
+    .article a {
+      color: #d61f26;
+      text-decoration: none;
+    }
+    .article a:hover {
+      text-decoration: underline;
+    }
     footer {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 30px 40px;
+      background-color: #141414;
+      color: #ccc;
+      padding: 40px;
       font-size: 14px;
     }
-    @media (max-width: 768px) {
-      header, footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav a {
-        margin: 10px 0 0 0;
-      }
+    footer p {
+      margin: 10px 0;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="site-name">Главные Новости</div>
+    <div class="logo">RTVI</div>
     <nav>
-      <a href="#">Главная</a>
+      <a href="#">Главное</a>
       <a href="#">Политика</a>
-      <a href="#">Экономика</a>
       <a href="#">Общество</a>
-      <a href="#">Контакты</a>
+      <a href="#">Экономика</a>
+      <a href="#">Наука</a>
     </nav>
   </header>
   <div class="container">
@@ -90,9 +99,9 @@
     </div>
   </div>
   <footer>
-    <p>© 2025 Главные Новости. Все права защищены. Использование материалов разрешено только с письменного согласия редакции.</p>
+    <p>© 2025 RTVI. Все права защищены. Использование материалов разрешено только с письменного согласия редакции.</p>
     <p>Пользователь, оставляя данные на сайте, соглашается с политикой конфиденциальности и обработкой персональных данных в соответствии с Федеральным законом № 152-ФЗ.</p>
-    <p>Контакты: VK: @glavnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24</p>
+    <p>Контакты: VK: @rtvi_news | Телефон: +7 (495) 000-00-00 | Адрес: г. Москва, ул. Примерная, д.1</p>
   </footer>
 </body>
 </html>
