@@ -1,109 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Актуальные Сюжеты — Спецрепортаж</title>
-    <style>
-        body {
-            font-family: "Georgia", serif;
-            margin: 0;
-            background-color: #f2f2f2;
-            color: #000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            max-width: 1200px;
-            width: 100%;
-            margin-top: 20px;
-            padding: 0 10px;
-        }
-        .sidebar {
-            width: 25%;
-            min-width: 200px;
-            padding: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-        .news {
-            margin-bottom: 15px;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        header {
-            border-bottom: 4px solid #0077cc;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            font-size: 28px;
-            margin: 0;
-            color: #0077cc;
-        }
-        .meta {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 30px;
-        }
-        article {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #000;
-        }
-        @media (max-width: 768px) {
-            .wrapper {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                padding: 10px;
-                order: 2;
-            }
-            .container {
-                width: 100%;
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости 24 — Последние события</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .logo {
+      height: 36px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .main-content {
+      flex: 1 1 700px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .sidebar {
+      flex: 1 1 300px;
+      padding: 20px;
+      margin: 10px;
+    }
+    .news-box {
+      background: #fff;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-left: 4px solid #003366;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+    .meta {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 25px;
+    }
+    article p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+    article p span {
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      margin-bottom: 12px;
+    }
+    a {
+      color: #003366;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .main-content, .sidebar {
+        margin: 5px 0;
+        padding: 20px;
+      }
+      .logo {
+        height: 28px;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header style="width: 100%; max-width: 1200px; padding: 10px 20px;">
-        <h1>Актуальные Сюжеты</h1>
-    </header>
-    <div class="wrapper">
-        <div class="sidebar">
-            <div class="news">➤ В Челябинске из-за жары начали сажать помидоры на балконах</div>
-            <div class="news">➤ В Ставрополе бабушка выиграла в лотерею и купила пылесос мечты</div>
-            <div class="news">➤ В Туле уличный кот стал талисманом магазина автозапчастей</div>
-        </div>
-        <div class="container">
-            <div class="meta">22 мая 2025, 09:00 — Спецрепортаж</div>
-            <article>
-                <p><span class="highlight">Сын выгнал с работы и спас меня!</span></p>
-                <p>Всю жизнь трудилась без конца, чтобы сын был не хуже других… Хотя ещё тогда говорили мне все, мол, дети сейчас ничего не ценят, им только телефоны подавай! Но лучше уж в телефоне, чем как я…</p>
-                <p>Потому что знаю, как это — 5 лет учиться, а потом трудиться за копейки! А сыну 17, и зарабатывает он в интернете больше меня раза в 4! Техники новой домой накупил, подарки мне дарит…</p>
-                <p>В том месяце вообще с собой позвал, говорит, мол, ума там много не нужно — главное, чтобы телефон был и час-два в день свободные!</p>
-                <p>Скинул ссылку эту – <a href="#">(ссылка)</a>, поначалу конечно боялась, пятый десяток как-никак уже пошёл… Но там ребята объяснили всё быстро, даже я поняла, и вечером уже сумму хорошую получила! Теперь в удовольствие живу для себя спокойно и плевать, кто что думает!!! Поэтому если вы тоже в таком положении, делюсь контактами – <a href="#">(ссылка)</a></p>
-            </article>
-        </div>
-        <div class="sidebar">
-            <div class="news">➤ В Саратове мальчик собрал рацию из деталей от пылесоса и связался с дальнобойщиком</div>
-            <div class="news">➤ В Кирове местные жители украсили остановку под Хогвартс</div>
-            <div class="news">➤ На Урале собака спасла кота из лужи — теперь их показывают в школе</div>
-        </div>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Feedbin-Icon-news.svg/1024px-Feedbin-Icon-news.svg.png" class="logo" alt="Новости 24">
+    <h1>Новости 24</h1>
+  </header>
+  <div class="layout">
+    <div class="main-content">
+      <div class="meta">22 мая 2025, 09:00 — Спецрепортаж</div>
+      <article>
+        <p><span>Сын выгнал с работы и спас меня!</span></p>
+        <p>Всю жизнь трудилась без конца, чтобы сын был не хуже других… Хотя ещё тогда говорили мне все, мол, дети сейчас ничего не ценят, им только телефоны подавай! Но лучше уж в телефоне, чем как я…</p>
+        <p>Потому что знаю, как это — 5 лет учиться, а потом трудиться за копейки! А сыну 17, и зарабатывает он в интернете больше меня раза в 4! Техники новой домой накупил, подарки мне дарит…</p>
+        <p>В том месяце вообще с собой позвал, говорит, мол, ума там много не нужно — главное, чтобы телефон был и час-два в день свободные!</p>
+        <p>Скинул ссылку эту – <a href="#">(ссылка)</a>, поначалу конечно боялась, пятый десяток как-никак уже пошёл… Но там ребята объяснили всё быстро, даже я поняла, и вечером уже сумму хорошую получила! Теперь в удовольствие живу для себя спокойно и плевать, кто что думает!!! Поэтому если вы тоже в таком положении, делюсь контактами – <a href="#">(ссылка)</a></p>
+      </article>
     </div>
+    <div class="sidebar">
+      <div class="news-box">➤ В Сочи стартовал фестиваль уличной еды. Местные повара удивляют посетителей блюдами на мангале.</div>
+      <div class="news-box">➤ В Кемерово школьники собрали электровелосипед из старых деталей. Их идеей заинтересовались местные бизнесмены.</div>
+      <div class="news-box">➤ В Нижнем Новгороде кот помогает одинокой пенсионерке торговать семечками. Местные прозвали его “Директор”.</div>
+    </div>
+  </div>
 </body>
 </html>
