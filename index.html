@@ -18,41 +18,32 @@
     header {
       background-color: #003366;
       color: #fff;
-      padding: 10px 20px;
+      padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .logo-title {
-      display: flex;
-      align-items: center;
-    }
-    .logo {
-      height: 36px;
-      margin-right: 10px;
-    }
     .site-name {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
       letter-spacing: 1px;
     }
     nav {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 18px;
     }
     nav a:hover {
       text-decoration: underline;
     }
     .layout {
       display: flex;
-      flex-wrap: wrap;
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
@@ -61,15 +52,12 @@
       flex: 1 1 700px;
       background-color: #fff;
       padding: 30px;
-      margin: 10px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
     .sidebar {
-      flex: 1 1 700px;
-      max-width: 700px;
-      padding: 20px;
-      margin: 10px auto 0 auto;
+      width: 280px;
+      margin-left: 20px;
     }
     .news-box {
       background: #fff;
@@ -78,22 +66,23 @@
       border-left: 4px solid #003366;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       border-radius: 4px;
+      font-size: 16px;
     }
     .meta {
-      font-size: 14px;
+      font-size: 16px;
       color: #777;
       margin-bottom: 25px;
     }
     article p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 0 0 16px;
+      font-size: 20px;
+      line-height: 1.7;
+      margin: 0 0 18px;
     }
     article p span {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 22px;
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     a {
       color: #003366;
@@ -110,27 +99,21 @@
       font-size: 14px;
       margin-top: 40px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       .layout {
         flex-direction: column;
-        padding: 10px;
+        padding: 15px;
       }
-      .main-content, .sidebar {
-        margin: 5px 0;
-        padding: 20px;
-      }
-      nav {
-        justify-content: center;
-        margin-top: 10px;
+      .sidebar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-title">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Feedbin-Icon-news.svg/1024px-Feedbin-Icon-news.svg.png" class="logo" alt="Real News">
-    </div>
     <div class="site-name">Real News</div>
     <nav>
       <a href="#">Главная</a>
