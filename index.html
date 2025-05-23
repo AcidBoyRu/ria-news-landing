@@ -1,129 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главные Новости — Последние события</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главные Новости</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #111;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
     header {
-      background-color: #003366;
+      background-color: #1a1a1a;
       color: #fff;
       padding: 20px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
     .site-name {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
-      letter-spacing: 1px;
-      margin-right: auto;
-    }
-    nav {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
+      margin-left: 20px;
       text-decoration: none;
-      font-size: 18px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease;
+      font-size: 16px;
     }
     nav a:hover {
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      text-decoration: underline;
     }
-    .layout {
-      display: flex;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px 40px;
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .main-content {
-      flex: 1 1 700px;
+    .article {
       background-color: #fff;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .sidebar {
-      width: 280px;
-      margin-left: 30px;
+    .article h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
-    .news-box {
-      background: #fff;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-left: 4px solid #003366;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    .meta {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 25px;
-    }
-    article p {
-      font-size: 20px;
-      line-height: 1.7;
-      margin: 0 0 18px;
-    }
-    article p span {
-      font-weight: bold;
-      font-size: 22px;
-      display: block;
-      margin-bottom: 14px;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .article p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 16px;
     }
     footer {
-      background-color: #003366;
+      background-color: #1a1a1a;
       color: #fff;
-      padding: 40px;
-      font-size: 16px;
-      line-height: 1.6;
+      padding: 30px 40px;
+      font-size: 14px;
     }
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-    @media screen and (max-width: 1024px) {
-      .layout {
-        flex-direction: column;
-        padding: 15px;
-      }
-      .sidebar {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-      }
-      header {
+    @media (max-width: 768px) {
+      header, footer {
         flex-direction: column;
         align-items: flex-start;
       }
-      nav {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        gap: 15px;
+      nav a {
+        margin: 10px 0 0 0;
       }
     }
   </style>
@@ -136,35 +77,22 @@
       <a href="#">Политика</a>
       <a href="#">Экономика</a>
       <a href="#">Общество</a>
-      <a href="#">Наука</a>
       <a href="#">Контакты</a>
     </nav>
   </header>
-  <div class="layout">
-    <div class="main-content">
-      <div class="meta">22 мая 2025, 09:00 — Спецрепортаж</div>
-      <article>
-        <p><span>Сын выгнал с работы и спас меня!</span></p>
-        <p>Всю жизнь трудилась без конца, чтобы сын был не хуже других… Хотя ещё тогда говорили мне все, мол, дети сейчас ничего не ценят, им только телефоны подавай! Но лучше уж в телефоне, чем как я…</p>
-        <p>Потому что знаю, как это — 5 лет учиться, а потом трудиться за копейки! А сыну 17, и зарабатывает он в интернете больше меня раза в 4! Техники новой домой накупил, подарки мне дарит…</p>
-        <p>В том месяце вообще с собой позвал, говорит, мол, ума там много не нужно — главное, чтобы телефон был и час-два в день свободные!</p>
-        <p>Скинул ссылку эту – <a href="#">(ссылка)</a>, поначалу конечно боялась, пятый десяток как-никак уже пошёл… Но там ребята объяснили всё быстро, даже я поняла, и вечером уже сумму хорошую получила! Теперь в удовольствие живу для себя спокойно и плевать, кто что думает!!! Поэтому если вы тоже в таком положении, делюсь контактами – <a href="#">(ссылка)</a></p>
-      </article>
-    </div>
-    <div class="sidebar">
-      <div class="news-box">➤ В Сочи стартовал фестиваль уличной еды. Местные повара удивляют посетителей блюдами на мангале.</div>
-      <div class="news-box">➤ В Кемерово школьники собрали электровелосипед из старых деталей. Их идеей заинтересовались местные бизнесмены.</div>
-      <div class="news-box">➤ В Нижнем Новгороде кот помогает одинокой пенсионерке торговать семечками. Местные прозвали его “Директор”.</div>
-      <div class="news-box">➤ В Уфе молодожёны устроили свадьбу в автобусе, чтобы сэкономить на зале.</div>
-      <div class="news-box">➤ На Алтае волонтёры спасли енота, застрявшего в мусорном баке. Его теперь приютили в местной школе.</div>
+  <div class="container">
+    <div class="article">
+      <h1>Сын выгнал с работы и спас меня!</h1>
+      <p>Всю жизнь трудилась без конца, чтобы сын был не хуже других… Хотя ещё тогда говорили мне все, мол, дети сейчас ничего не ценят, им только телефоны подавай! Но лучше уж в телефоне, чем как я…</p>
+      <p>Потому что знаю, как это — 5 лет учиться, а потом трудиться за копейки! А сыну 17, и зарабатывает он в интернете больше меня раза в 4! Техники новой домой накупил, подарки мне дарит…</p>
+      <p>В том месяце вообще с собой позвал, говорит, мол, ума там много не нужно — главное, чтобы телефон был и час-два в день свободные!</p>
+      <p>Скинул ссылку эту – <a href="#">(ссылка)</a>, поначалу конечно боялась, пятый десяток как-никак уже пошёл… Но там ребята объяснили всё быстро, даже я поняла, и вечером уже сумму хорошую получила! Теперь в удовольствие живу для себя спокойно и плевать, кто что думает!!! Поэтому если вы тоже в таком положении, делюсь контактами – <a href="#">(ссылка)</a></p>
     </div>
   </div>
   <footer>
-    <div class="footer-container">
-      <p><strong>© 2025 Главные Новости.</strong> Все права защищены. Использование материалов разрешено только с письменного согласия редакции. Информация на сайте носит справочный характер и не является публичной офертой.</p>
-      <p>Пользователь, оставляя данные на сайте, соглашается с политикой конфиденциальности и обработкой персональных данных в соответствии с Федеральным законом № 152-ФЗ.</p>
-      <p>Контакты: VK: @glavnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24</p>
-    </div>
+    <p>© 2025 Главные Новости. Все права защищены. Использование материалов разрешено только с письменного согласия редакции.</p>
+    <p>Пользователь, оставляя данные на сайте, соглашается с политикой конфиденциальности и обработкой персональных данных в соответствии с Федеральным законом № 152-ФЗ.</p>
+    <p>Контакты: VK: @glavnews | Телефон: +7 (495) 123-45-67 | Адрес: г. Москва, ул. Правда, д.24</p>
   </footer>
 </body>
 </html>
